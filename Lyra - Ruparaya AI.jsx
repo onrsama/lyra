@@ -1,6 +1,6 @@
 /**
- * Lyra - Ruparaya AI - JSX UI (UTF-8 Safe)
- * v1.0
+ * Lyra - Ruparaya AI (v1.0)
+ * (UTF-8 Safe)
  */
 
 #target photoshop
@@ -130,7 +130,7 @@ function clearAuth() {
 
 // ===== CLAIM KODE & NAMA DIALOG =====
 function showClaimDialog() {
-    var dlg = new Window("dialog", "Aktivasi Lyra - Ruparaya AI");
+    var dlg = new Window("dialog", "Aktivasi Lyra - Ruparaya AI (v1.0)");
     dlg.orientation = "column"; 
     dlg.alignChildren = "fill"; 
     dlg.margins = 16; 
@@ -298,7 +298,7 @@ function ensureAuthOrPrompt() {
 function createProgressWindow(modelName) {
     PROCESS_CANCELLED = false;
 
-    var win = new Window("palette", "Lyra - Ruparaya AI - Progress");
+    var win = new Window("palette", "Lyra - Ruparaya AI (v1.0) - Progress");
     win.orientation = "column";
     win.alignChildren = "fill";
     win.margins = 14;
@@ -326,12 +326,19 @@ function createProgressWindow(modelName) {
 
     // Windows notice (opsional)
     if (CONFIG.IS_WINDOWS) {
-        var sep = win.add("panel"); sep.preferredSize.height = 1;
+        var sep = win.add("panel"); 
+        sep.preferredSize.height = 1;
+
         var note = win.add("statictext", undefined,
-            "Windows may flash brief command windows - this is normal.", {multiline:true});
+            "Windows may flash brief command windows - this is normal.", {multiline:true}); 
         note.graphics.font = ScriptUI.newFont(note.graphics.font.name, ScriptUI.FontStyle.ITALIC, 9);
         note.justify = "center";
-        note.preferredSize.height = 30;
+
+        // Tambahkan baris copyright di bawah note
+        var copyright = win.add("statictext", undefined,
+            "All Right Reserved Ruparaya - code by onil", {multiline:true});
+        copyright.graphics.font = ScriptUI.newFont(copyright.graphics.font.name, ScriptUI.FontStyle.ITALIC, 8);
+        copyright.justify = "center";
     }
 
     // Footer actions
