@@ -1,6 +1,6 @@
 /**
  * Lyra - Ruparaya AI Generation - JSX UI (UTF-8 Safe)
- * v 1.0
+ * v2.0
  */
 
 #target photoshop
@@ -1234,7 +1234,7 @@ function testAPIKey(apiKey) {
 
 // ===== MAIN DIALOG =====
 function createDialog() {
-    var dialog = new Window("dialog", "Lyra - Ruparaya AI (v1.0)");
+    var dialog = new Window("dialog", "Lyra - Ruparaya AI (v2.0)");
     dialog.orientation = "column";
     dialog.alignChildren = "fill";
     dialog.margins = 16;
