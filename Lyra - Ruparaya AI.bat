@@ -57,7 +57,7 @@ if not exist "%DEST%" (
   )
 )
 
-echo [OK] Target folder: "%DEST%"
+echo [OK] Target folder: "%PS_PATH%"
 echo.
 
 :: ============================================================
@@ -94,7 +94,6 @@ if /I "%MODE%"=="UPDATE" if "%DO_BACKUP%"=="1" (
   mkdir "%BKP%" >nul 2>&1
   attrib -h -s -r "%TARGET_PATH%" >nul 2>&1
   copy /y "%TARGET_PATH%" "%BKP%\%TARGET_NAME%" >nul
-  echo [BKP] Versi lama disalin ke: "%BKP%\%TARGET_NAME%"
   echo.
 )
 
@@ -111,7 +110,7 @@ for /f "usebackq delims=" %%U in (`
     "$u=[System.Uri]::EscapeUriString($b + $f);" ^
     "Write-Output $u"
 `) do set "RAW_URL=%%U"
-echo [URL] Github
+echo [URL] konek ke server
 
 where curl >nul 2>&1
 if %errorlevel% EQU 0 (
@@ -155,7 +154,7 @@ if exist "%TARGET_PATH%" (
   echo [SUCCESS] %MODE% selesai!
   echo          (Jika belum terlihat di menu, restart Photoshop)
 ) else (
-  echo [ERR] Gagal menulis file di folder target.
+  echo.
   pause
   exit /b 1
 )
