@@ -1271,7 +1271,7 @@ function createDialog() {
     dialog.colorCheckbox = rightCol.add("checkbox", undefined, "Use reference color");
     dialog.colorCheckbox.value = false;
 
-    var fgText = rightCol.add("statictext", undefined, "Warna aktif: " + (function(){
+    var fgText = rightCol.add("statictext", undefined, "Active color: " + (function(){
         try {
             var rgb = app.foregroundColor.rgb;
             return "#" + toHex(Math.round(rgb.red)) + toHex(Math.round(rgb.green)) + toHex(Math.round(rgb.blue));
