@@ -1268,7 +1268,7 @@ function createDialog() {
     rightCol.alignChildren = ["left","top"];
     rightCol.margins = 0;
 
-    dialog.colorCheckbox = rightCol.add("checkbox", undefined, "Gunakan warna referensi");
+    dialog.colorCheckbox = rightCol.add("checkbox", undefined, "Use reference color");
     dialog.colorCheckbox.value = false;
 
     var fgText = rightCol.add("statictext", undefined, "Warna aktif: " + (function(){
@@ -1287,7 +1287,7 @@ function createDialog() {
     var refGroup = rightCol.add("group");
     refGroup.orientation = "row";
     refGroup.alignChildren = ["left", "center"];
-    var refLabel = refGroup.add("statictext", undefined, "Referensi: (none)");
+    var refLabel = refGroup.add("statictext", undefined, "Reference: (none)");
     refLabel.characters = 24;
     var addRefBtn = refGroup.add("button", undefined, "Add...");
     var clearRefBtn = refGroup.add("button", undefined, "Clear");
