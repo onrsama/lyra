@@ -137,12 +137,12 @@ function showClaimDialog() {
     dlg.spacing = 10;
     
     var g1 = dlg.add("group"); 
-    g1.add("statictext", undefined, "Nama:"); 
+    g1.add("statictext", undefined, "Name:"); 
     var nameInput = g1.add("edittext", undefined, ""); 
     nameInput.characters = 32;
 
     var g2 = dlg.add("group"); 
-    g2.add("statictext", undefined, "Kode 20-karakter:");
+    g2.add("statictext", undefined, "Access Code:");
     var codeInput = g2.add("edittext", undefined, ""); 
     codeInput.characters = 24;
 
@@ -1279,7 +1279,7 @@ function createDialog() {
     })());
 
     // === HD checkbox (upscale via server) ===
-    dialog.hdCheckbox = rightCol.add("checkbox", undefined, "HD");
+    dialog.hdCheckbox = rightCol.add("checkbox", undefined, "HD (Sharp)");
     dialog.hdCheckbox.value = false; // default off
 
     // === Reference image selector ===
